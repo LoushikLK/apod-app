@@ -10,4 +10,6 @@ showing the upload folder to have a better understanding of folder structure on 
 
 DEMO ENVIRONMENT VARIABLE
 
-# provided .env for sample environment veriable
+provided .env for sample environment veriable
+
+removing all console log for clean log

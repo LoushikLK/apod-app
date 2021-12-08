@@ -113,8 +113,10 @@ router.post("/apod", async (req, res) => {
                             //save data to database by save() method
 
                             newApod.save().then(() => {
-                                console.log("saved to database");
-                            }).catch((err) => { console.log(err) })
+                                // console.log("saved to database");
+                            }).catch((err) => {
+                                //  console.log(err) 
+                            })
 
                             return;
 
@@ -147,9 +149,9 @@ router.post("/apod", async (req, res) => {
                 //save data to database by save() method
 
                 newApod.save().then(() => {
-                    console.log("saved to database");
+                    // console.log("saved to database");
                 }).catch((err) => {
-                    console.log(err)
+                    // console.log(err)
                 })
 
 
