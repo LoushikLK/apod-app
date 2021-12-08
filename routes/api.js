@@ -98,7 +98,7 @@ router.post("/apod", async (req, res) => {
 
                         savetofolder.on('finish', () => {
                             //after downloading log 
-                            console.log('Successfully downloaded file!');
+                            // console.log('Successfully downloaded file!');
                             const newApod = new apod({
                                 date: apodData.date,
                                 explanation: apodData.explanation,
