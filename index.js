@@ -44,6 +44,14 @@ const mongoSanitize = require('express-mongo-sanitize');
 app.use(mongoSanitize());
 
 
+//error handling middleware for handling errors which throws error
+app.use((error, req, res, next) => {
+    res.json({
+        message: error.message
+    });
+});
+
+
 //importing express routers
 const apiRouter = require("./routes/api");
 
@@ -56,6 +64,9 @@ app.get("/", async (req, res) => {
     res.status(200).sendFile(path.join(__dirname, './public/view/index.html'));
 })
 
+app.get("*", async (req, res) => {
+    res.status(404).send("<h1>404 Page Not Found</h1>");
+})
 
 
 
